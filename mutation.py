@@ -10,13 +10,13 @@ def permutation_swap (individual):
     # student code begin
 
     # random two positions
-    locus1 = random.randint(0, 7)
-    locus2 = random.randint(0, 7)
+    x1 = random.randint(0, 7)
+    x2 = random.randint(0, 7)
 
     # swap these two positions
-    temp = mutant[locus1]
-    mutant[locus1] = mutant[locus2]
-    mutant[locus2] = temp
+    temp = mutant[x1]
+    mutant[x1] = mutant[x2]
+    mutant[x2] = temp
 
     # student code end
     
