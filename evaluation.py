@@ -51,8 +51,6 @@ def fitness_8queen (individual): # maximization
         bkk = (size+1-x) - y    # offset magnitude of back-diagonal
         diagonal = numpy.diag(np_matrix, k)
         bkdiagonal = numpy.diag( numpy.fliplr(np_matrix), bkk )
-        # print("diagonal:", diagonal)
-        # print("bkdiagonal:", bkdiagonal)
 
         # calculate amount of non-zero numbers behind x for diag #
         checked_diag = 0
@@ -71,9 +69,6 @@ def fitness_8queen (individual): # maximization
                 checked_bkdiag = checked_bkdiag + 1
             if num != 0 and num == x :
                 bkbehind = True
-        
-        # print("checked diag:", checked_diag)
-        # print("checked bkdiag", checked_bkdiag)
 
         # calculate amount of checks
         checks_diag = sumAP(checked_diag)
@@ -107,15 +102,10 @@ def fitness_8queen (individual): # maximization
 
     matrix = layoutToMatrix(individual)
 
-    # print()
-    # printMatrix( matrix )
-
     np_matrix = numpy.array(matrix)    # convert to numpy ndarray(matrix)
 
     for i in range( len(individual) ) :
         check_diagonals = check_diagonals + calcCheckBehind(np_matrix, len(individual), i+1, individual[i])
-
-    # print("x:", int(check_on_x), "diagonal:", check_diagonals)
 
     check = check_on_x + check_diagonals
 

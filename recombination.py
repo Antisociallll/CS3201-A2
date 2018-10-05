@@ -29,29 +29,4 @@ def permutation_cut_and_crossfill (parent1, parent2):
     offspring1 = p1a + p2b
     offspring2 = p2a + p1b
 
-    """
-    print(p1a, p1b)
-    print(p2a, p2b)
-    """
-
     return offspring1, offspring2
-
-
-"""
-    test here
-"""
-"""
-parent = [2, 8, 5, 7, 1, 4, 3, 6]
-
-print( parent[:4] )
-print( parent[4:] )
-# print( [1, 2, 3, 4] - [2, 3] )
-
-p1b_diff_p2a = [2, 6, 4, 7, 8]
-
-for num in [8, 7, 6] :
-    if num in p1b_diff_p2a :
-        p1b_diff_p2a.remove(num)
-
-print(p1b_diff_p2a)
-"""

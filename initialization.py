@@ -20,22 +20,14 @@ def permutation (pop_size, chrom_length):
     while len(population) < pop_size:
         layout = []
         while len(layout) < chrom_length:
-            x = random.randint(1,8)
+            x = random.randint(1, 8)
             layout.append(x)
             if len(layout) == chrom_length:
                 population.append(layout)
     
     # student code end
-
-    
-    # test output
-    #for layout in population :
-    #    print(layout)
-    
     
     return population
 
-# here is a test
-#permutation(40, 8)
 
 
